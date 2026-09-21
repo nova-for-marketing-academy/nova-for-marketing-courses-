@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nova-for-marketing-academy.github.io/nova-for-marketing-courses-/sitemap.xml
