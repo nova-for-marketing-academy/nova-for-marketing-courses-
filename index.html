@@ -94,6 +94,44 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "دبلومات نوفا مدتها قد إيه؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "كل دبلومة فيها 10 محاضرات، بمعدل محاضرتين في الأسبوع، يعني بتخلص الدبلومة في حوالي 5 أسابيع من أول محاضرة لحد التخرج." }
+    },
+    {
+      "@type": "Question",
+      "name": "في شهادة بعد التخرج؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "أه، بتاخد شهادة معتمدة من نوفا للتسويق بعد ما تخلص الدبلومة، تقدر تعرضها لأي عميل أو شركة أو تستخدمها في بحثك عن شغل." }
+    },
+    {
+      "@type": "Question",
+      "name": "طرق الدفع إيه؟ ممكن أقسّط؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "تقدر تدفع دفعة واحدة، أو تقسّط على أكتر من دفعة حسب الدبلومة — التفاصيل بتتحدد معاك مباشرة على واتساب وقت التسجيل." }
+    },
+    {
+      "@type": "Question",
+      "name": "إزاي أسجل بالظبط؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "التسجيل بيتم مباشرة على واتساب، من غير استمارات طويلة أو انتظار — تبعت رسالة وتتكلم مع المدربين وتتأكد من كل التفاصيل في نفس اليوم." }
+    },
+    {
+      "@type": "Question",
+      "name": "المحاضرات لايف ولا مسجلة؟ لو فوّت محاضرة أعمل إيه؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "كل المحاضرات بتكون مسجلة على زووم ومتوفرة على لينك دائم على درايف، فترجع لأي محاضرة فاتتك في أي وقت تحتاجه من غير ضغط." }
+    },
+    {
+      "@type": "Question",
+      "name": "الدبلومة مناسبة لمين؟ لازم خبرة سابقة؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "مناسبة لأي حد عايز يبدأ في التسويق من الصفر، أو عنده خبرة وعايز يرتبها ويطورها. المحتوى عملي وبيوضح لك كل خطوة من الأساس." }
+    }
+  ]
+}
+</script>
 <style>
   :root{
     --black: #0D0D0D;
@@ -378,6 +416,33 @@
   .foot-social a svg{width:17px;height:17px;}
   .foot-social a:hover{border-color:var(--red);color:var(--paper);background:var(--red);}
 
+  /* ===== BLOG TEASER ===== */
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .blog-card{background:var(--card);border:1px solid var(--line);padding:30px;display:flex;flex-direction:column;gap:14px;text-decoration:none;transition:.25s;}
+  .blog-card:hover{border-color:var(--red);}
+  .blog-card .blog-tag{color:var(--red);font-size:13px;font-weight:700;letter-spacing:.5px;}
+  .blog-card h3{font-size:19px;color:var(--paper);line-height:1.4;}
+  .blog-card p{font-size:14.5px;color:var(--paper-dim);line-height:1.8;flex:1;}
+  .blog-card .blog-read{color:var(--paper);font-size:14px;font-weight:700;display:flex;align-items:center;gap:6px;}
+  @media (max-width:900px){.blog-grid{grid-template-columns:1fr;}}
+
+  /* ===== FAQ ===== */
+  .faq-list{max-width:820px;margin:0 auto;}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-item summary{
+    list-style:none;cursor:pointer;padding:26px 0;
+    font-size:18px;font-weight:700;color:var(--paper);
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary .faq-icon{
+    flex:0 0 auto;width:26px;height:26px;border:1px solid var(--line);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;color:var(--red);
+    font-family:'Poppins';font-size:18px;transition:.25s;
+  }
+  .faq-item[open] summary .faq-icon{transform:rotate(45deg);}
+  .faq-item p{color:var(--paper-dim);font-size:15.5px;line-height:1.9;padding:0 0 26px;max-width:680px;}
+
   /* ===== FOOTER ===== */
   footer{border-top:1px solid var(--line);padding:70px 0 30px;}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:60px;}
@@ -428,6 +493,7 @@
       <a href="#method">طريقتنا</a>
       <a href="#mentor">المدربين</a>
       <a href="#courses">الدبلومات</a>
+      <a href="blog.html">المدونة</a>
       <a href="#contact">تواصل</a>
     </nav>
     <a href="https://wa.me/201004076641?text=أنا%20مهتم%20بالتسجيل%20في%20أحد%20كورسات%20أو%20دبلومات%20نوفا%20للتسويق،%20عايز%20أعرف%20التفاصيل" target="_blank" rel="noopener" class="btn">احجز مكانك</a>
@@ -775,6 +841,70 @@
   </div>
 </section>
 
+<section id="blog-teaser">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">من المدونة</div>
+      <h2>مقالات تساعدك تاخد قرارك قبل التسجيل</h2>
+    </div>
+    <div class="blog-grid">
+      <a class="blog-card" href="blog-start-marketing-from-zero.html">
+        <span class="blog-tag">دليل مبتدئين</span>
+        <h3>إزاي تبدأ مسار التسويق الإلكتروني من الصفر؟</h3>
+        <p>خطوات عملية واضحة لو حاسس إنك تايه بين المصادر ومش عارف تبدأ منين في التسويق الإلكتروني.</p>
+        <span class="blog-read">اقرأ المقال ←</span>
+      </a>
+      <a class="blog-card" href="blog-real-estate-marketing.html">
+        <span class="blog-tag">تسويق عقاري</span>
+        <h3>التسويق العقاري إزاي يختلف عن التسويق العادي؟</h3>
+        <p>الفروق الجوهرية اللي لازم تعرفها قبل ما تسوّق لأي مشروع عقاري في مصر أو الخليج.</p>
+        <span class="blog-read">اقرأ المقال ←</span>
+      </a>
+      <a class="blog-card" href="blog-ai-content-tools.html">
+        <span class="blog-tag">أدوات AI</span>
+        <h3>أدوات الذكاء الاصطناعي في صناعة المحتوى</h3>
+        <p>دليل مختصر لأهم أدوات الـ AI اللي تقدر تستخدمها فعليًا في شغلك التسويقي من النهاردة.</p>
+        <span class="blog-read">اقرأ المقال ←</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">أسئلة شائعة</div>
+      <h2>أسئلة بتتكرر علينا كتير قبل التسجيل</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>دبلومات نوفا مدتها قد إيه؟<span class="faq-icon">+</span></summary>
+        <p>كل دبلومة فيها 10 محاضرات، بمعدل محاضرتين في الأسبوع، يعني بتخلص الدبلومة في حوالي 5 أسابيع من أول محاضرة لحد التخرج.</p>
+      </details>
+      <details class="faq-item">
+        <summary>في شهادة بعد التخرج؟<span class="faq-icon">+</span></summary>
+        <p>أه، بتاخد شهادة معتمدة من نوفا للتسويق بعد ما تخلص الدبلومة، تقدر تعرضها لأي عميل أو شركة أو تستخدمها في بحثك عن شغل.</p>
+      </details>
+      <details class="faq-item">
+        <summary>طرق الدفع إيه؟ ممكن أقسّط؟<span class="faq-icon">+</span></summary>
+        <p>تقدر تدفع دفعة واحدة، أو تقسّط على أكتر من دفعة حسب الدبلومة — التفاصيل بتتحدد معاك مباشرة على واتساب وقت التسجيل.</p>
+      </details>
+      <details class="faq-item">
+        <summary>إزاي أسجل بالظبط؟<span class="faq-icon">+</span></summary>
+        <p>التسجيل بيتم مباشرة على واتساب، من غير استمارات طويلة أو انتظار — تبعت رسالة وتتكلم مع المدربين وتتأكد من كل التفاصيل في نفس اليوم.</p>
+      </details>
+      <details class="faq-item">
+        <summary>المحاضرات لايف ولا مسجلة؟ لو فوّت محاضرة أعمل إيه؟<span class="faq-icon">+</span></summary>
+        <p>كل المحاضرات بتكون مسجلة على زووم ومتوفرة على لينك دائم على درايف، فترجع لأي محاضرة فاتتك في أي وقت تحتاجه من غير ضغط.</p>
+      </details>
+      <details class="faq-item">
+        <summary>الدبلومة مناسبة لمين؟ لازم خبرة سابقة؟<span class="faq-icon">+</span></summary>
+        <p>مناسبة لأي حد عايز يبدأ في التسويق من الصفر، أو عنده خبرة وعايز يرتبها ويطورها. المحتوى عملي وبيوضح لك كل خطوة من الأساس.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="wrap">
     <div class="final-cta">
@@ -817,8 +947,8 @@
         <h5>الشركة</h5>
         <a href="#mentor">المدربين</a>
         <a href="#method">طريقتنا</a>
-        <a href="#">آراء الطلاب</a>
-        <a href="#">الأسئلة الشائعة</a>
+        <a href="#testimonials">آراء الطلاب</a>
+        <a href="#faq">الأسئلة الشائعة</a>
       </div>
       <div class="foot-col">
         <h5>تواصل</h5>
@@ -838,7 +968,7 @@
     </div>
     <div class="foot-bottom">
       <span>© 2026 NOVA FOR MARKETING. جميع الحقوق محفوظة.</span>
-      <span>مصر — السعودية — الإمارات</span>
+      <span>مصر — السعودية — الكويت</span>
     </div>
   </div>
 </footer>
